@@ -7,6 +7,11 @@
   --thirdary-bkg-color: #2f303a;
   /* thirdary-bkg - на даний момент є 2 таких кольори, тому добавив в рут */
 }
+*,
+*::after,
+* ::before {
+  outline: 1px solid red;
+}
 
 /* style for body */
 
@@ -23,10 +28,30 @@ body {
 
 /* constant identical properties */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 94px 15px;
+}
+
 .list {
   list-style: none;
 }
 .link {
+  text-align: center;
+  align-items: center;
   text-decoration: none;
 }
 .title {
@@ -37,22 +62,53 @@ body {
 }
 
 /* nav */
+header a {
+  display: block;
+  height: 80px;
+}
 
+header > .container,
+.nav,
+.nav-link,
+.contact {
+  display: flex;
+}
+header > .container {
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
+  align-items: center;
+  height: 80px;
+}
 .logo {
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-right: 93px;
+  padding: 24px 0;
+}
+.nav-link :not(:last-child) {
+  margin-right: 50px;
 }
 .nav .studio {
   color: #000000;
+}
+.nav {
+  align-items: center;
+}
+.nav-link {
+  padding: 0 0;
+  text-align: center;
 }
 .nav-link .link {
   color: var(--secondary-text-color);
   font-weight: 500;
   line-height: 1.38px;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nav-link .link:hover,
 .nav-link .link:focus {
@@ -63,6 +119,9 @@ body {
 }
 
 /* contact */
+.contact > li:not(:last-child) {
+  margin-right: 50px;
+}
 
 .contact .link {
   color: var(--primary-text-color);

@@ -64,7 +64,6 @@ p {
 /* nav */
 header a {
   display: block;
-  height: 80px;
 }
 
 header > .container,

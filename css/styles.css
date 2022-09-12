@@ -96,11 +96,14 @@ button {
 .portf-list {
   display: flex;
 }
-.header > .container,
+.header > .container {
+  justify-content: space-between;
+}
+
 .feat > .list,
 .do > .list,
 .team > .list {
-  justify-content: space-between;
+  gap: 30px;
 }
 .header > .container {
   align-items: center;
@@ -150,6 +153,7 @@ button {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding: 32px 0px;
 }
 .contact .link:hover,
 .contact .link:focus {
@@ -303,6 +307,9 @@ button {
 }
 .btn-list > li:not(:last-child) {
   margin-right: 8px;
+}
+.btn-list .button {
+  padding: 6px 22px;
 }
 
 .portfolio .button {
